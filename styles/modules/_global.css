@@ -6,6 +6,12 @@
   padding: 0;
 }
 
+body {
+  font-family: var(--primary-font);
+  color: var(--text-color);
+  font-size: 1.4rem;
+}
+
 button {
   border: none;
 }
