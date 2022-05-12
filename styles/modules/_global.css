@@ -16,6 +16,10 @@ button {
   border: none;
 }
 
+input {
+  border: none;
+}
+
 li {
   list-style: none;
 }
@@ -28,7 +32,7 @@ input {
   font: inherit;
 }
 
-.bg-section{
+.bg-section {
   background-color: #00000070;
   height: 100vh;
   overflow: hidden;
