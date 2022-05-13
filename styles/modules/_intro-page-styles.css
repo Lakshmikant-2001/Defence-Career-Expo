@@ -1,8 +1,13 @@
 #intro-page {
+  background-image: url('../../assets/intro-page-bg.jpeg');
   padding: 2.5rem;
   display: flex;
   flex-direction: column;
   position: relative;
+}
+
+#intro-page > *{
+  z-index: 5;
 }
 
 #intro-page > header {
@@ -41,13 +46,14 @@
 }
 
 .ind-expo-det {
-  width: 25%;
+  width: clamp(100px, 25vw, 250px);
+  /* width: 25%; */
   height: 40%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin: 2rem;
+  margin: clamp(1rem, 5vw, 2rem);
   background: linear-gradient(180deg, #c4c4c4 0%, rgba(177, 175, 175, 0) 100%);
   box-shadow: 3px 2px 10px #00000030, -3px -1px 5px #00000030;
 }
@@ -64,12 +70,40 @@
   text-align: center;
 }
 
+.ind-expo-det p:last-child{
+  font-size: clamp(.8rem, 4vw, 1.4rem);
+}
+
 .ind-expo-det > :first-child {
-  font-size: 7rem;
+  font-size: clamp(2rem, 8vw, 7rem);
   font-weight: 800; 
   margin-bottom: 0.5rem;
 }
 
 .ind-expo-det:last-child > p:first-child {
-  font-size: 3.25rem;
+  font-size: clamp(2rem, 4vw, 3.25rem);
+}
+
+@media (max-width: 790px){
+  .expo-det-wrapper{
+    flex-direction: column;
+  }
+
+  .ind-expo-det {
+    padding: .6rem;
+  }
+
+  .dce-logo {
+    position: absolute;
+    width: clamp(40px, 15vw, 150px);
+    right: 0;
+    bottom: 0;
+  }
+}
+
+@media (max-width: 790px){
+  .expo-det-wrapper{
+    padding-bottom: 2.4rem;
+  }
+
 }
