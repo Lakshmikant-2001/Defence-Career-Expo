@@ -1,8 +1,10 @@
 #page-footer{
     display: flex;
     justify-content: space-between;
+    align-items: center;
     background-color: #111;
     padding:5rem 3rem;
+    flex-wrap: wrap;
 }
 
 .left-div,.right-div{
@@ -10,6 +12,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    height: 300px;
 }
 
 .left-div > div{
@@ -48,4 +51,10 @@
     height: 12px;
     background-color: #222;
     /* box-shadow: 0 -5px 20px #D2232E30; */
+}
+
+@media (max-width:547px) {
+    #page-footer{
+        justify-content: center;
+    }
 }
